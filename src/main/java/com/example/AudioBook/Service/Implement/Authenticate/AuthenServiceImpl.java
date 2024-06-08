@@ -66,6 +66,7 @@ public class AuthenServiceImpl implements AuthenService {
             }
         }
         String otp = otpUtil.generateOtp();
+        System.out.println("OTP issssssssssss: "+otp);
         try {
             emailUtil.sendOtpEmail(request.getEmail(), otp);
         } catch (MessagingException e) {
@@ -172,6 +173,7 @@ public class AuthenServiceImpl implements AuthenService {
                     .isVerify(true)
                     .token(jwtToken)
                     .userInfo(audioUserConverter.toUserInfo(user))
+                    .userId(userId)
                     .build();
         }
         return VerifyOTP.builder()
@@ -191,6 +193,7 @@ public class AuthenServiceImpl implements AuthenService {
                     .build();
         }
         String otp = otpUtil.generateOtp();
+        System.out.println("OTP issssssssssss: "+otp);
         try {
             emailUtil.sendOtpEmail(email, otp);
         } catch (MessagingException e) {
@@ -215,6 +218,7 @@ public class AuthenServiceImpl implements AuthenService {
                     .build();
         }
         String password = passwordUtil.generatePassword();
+        System.out.println("Password issssssssssss: "+password);
         try {
             emailUtil.sendPasswordEmail(email, password);
         } catch (MessagingException e) {

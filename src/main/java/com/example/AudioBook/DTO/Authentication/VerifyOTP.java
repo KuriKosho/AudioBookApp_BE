@@ -13,5 +13,6 @@ public class VerifyOTP {
     private String token;
     private boolean isVerify;
     private UserInfo userInfo;
+    private String userId;
 
 }
