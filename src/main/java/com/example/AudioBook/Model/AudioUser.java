@@ -39,7 +39,7 @@ public class AudioUser implements UserDetails{
     private String profileImg;
     private LocalDate dob;
     private String phone;
-
+    private boolean isPremium;
 //    @DBRef
 //    private List<Reviewer> reviewerList;
 

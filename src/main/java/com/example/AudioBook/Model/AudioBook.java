@@ -38,6 +38,7 @@ public class AudioBook {
     private String audioUrl;
     private String audioLength;
     private LocalDate releaseDate;
+    private boolean isPremium;
 
     @DBRef
     private List<Reviewer> reviewers;
